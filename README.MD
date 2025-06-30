@@ -1,5 +1,6 @@
 # Java Spring Starter template (update)
-Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Hỏi Dân IT (Eric)
+## H1
+### H2
 
 ## Về tác giả
 HELLO
