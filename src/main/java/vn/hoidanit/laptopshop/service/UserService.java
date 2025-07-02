@@ -29,6 +29,6 @@ public class UserService {
     }
 
     public List<User> getAllUserByEmail(String email) {
-        return userRepository.findAll();
+        return userRepository.findByEmail(email);
     }
 }
