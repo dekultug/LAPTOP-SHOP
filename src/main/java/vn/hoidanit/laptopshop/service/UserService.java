@@ -31,4 +31,8 @@ public class UserService {
     public List<User> getAllUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    public User getUserById(Long id) {
+        return userRepository.findById(id);
+    }
 }
