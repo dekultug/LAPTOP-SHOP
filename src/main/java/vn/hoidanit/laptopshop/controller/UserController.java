@@ -1,6 +1,7 @@
 package vn.hoidanit.laptopshop.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -56,8 +57,8 @@ public class UserController {
     @RequestMapping("/admin/user/{id}")
     public String getUserDetailPage(Model model, @PathVariable long id) {
         System.out.println("check path id = " + id);
-        User userById = userService.findUserById(id);
-        model.addAttribute("user", userById);
+        Optional<User> userById = userService.getUserById(id);
+        model.addAttribute("user", userById.get());
         return "admin/user/show";
     }
 }
