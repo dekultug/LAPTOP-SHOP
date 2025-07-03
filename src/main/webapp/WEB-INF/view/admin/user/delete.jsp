@@ -41,7 +41,16 @@
                                     <li class="list-group-item">FullName: ${user.fullName}</li>
                                     <li class="list-group-item">Address: ${user.address}</li>
                                 </ul>
+
                             </div>
+
+                            <form:form method="post" action="/admin/user/delete" modelAttribute="user">
+                                <div class="mb-3" style="display: none;">
+                                    <label class="form-label">Id:</label>
+                                    <form:input value="${user.id}" type="text" class="form-control" path="id" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form:form>
 
                         </div>
 
