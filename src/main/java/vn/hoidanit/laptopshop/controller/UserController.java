@@ -92,9 +92,8 @@ public class UserController {
 
     @PostMapping("/admin/user/delete") // GET
     public String deleteUser(Model model, @ModelAttribute("user") User user) {
-        Optional<User> userById = userService.getUserById(user.getId());
-        User currentUser = userById.get();
-        userService.deleteUser(currentUser.getId());
+        System.out.println("delete " + user);
+        userService.deleteUser(user.getId());
         return "redirect:/admin/user";
     }
 }
